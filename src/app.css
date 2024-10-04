@@ -1,10 +1,9 @@
-@layer base, theme, components, plugins, utilities;
+@layer base, theme, plugins, utilities;
 
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
-
-/* Only way to be able to override prose */
+/* Only way to be able to override prose utilities? */
 @import './prose.css' layer(plugins);
+/* @plugin '@tailwindcss/typography'; */
 
 /* Then just  */
 @layer plugins {
