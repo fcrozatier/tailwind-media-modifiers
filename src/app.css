@@ -1,11 +1,36 @@
-@layer base, theme, utilities;
+@layer base, theme, components, plugins, utilities;
 
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Only way to be able to override prose */
+@import './prose.css' layer(plugins);
+
+/* Then just  */
+@layer plugins {
+	.prose {
+		& p {
+			@apply text-red-500;
+		}
+	}
+}
+
+/* Otherwise @plugin directive we need this */
+/* :where(.prose) {
+	& p {
+		@apply text-red-500;
+	}
+} */
+
+/* or this, but I need !important modifier */
+/* @layer utilities {
+	:where(.prose) {
+		& p {
+			@apply text-red-500;
+		}
+	}
+} */
 
 @utility btn-sm {
 	@apply rounded-xl bg-indigo-500 p-1 text-gray-700;
-}
-
-@utility btn-lg {
-	@apply rounded-xl bg-red-500 p-10 text-blue-700;
 }
