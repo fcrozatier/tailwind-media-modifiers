@@ -1,0 +1,14 @@
+/* Tailwind theme */
+/* https://github.com/tailwindlabs/tailwindcss/blob/next/packages/tailwindcss/theme.css */
+
+/* Preflight */
+/* https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css */
+
+/* Typography */
+/* https://gist.github.com/adamwathan/41dcab602afd07ac8ba243eb186c324a */
+@layer base, theme, components, plugins,  utilities;
+
+@import 'tailwindcss';
+
+@layer components {
+}
