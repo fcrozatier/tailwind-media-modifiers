@@ -1,0 +1,28 @@
+{
+	"name": "tailwind-media-modifiers",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check .",
+		"format": "prettier --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.2.5",
+		"@sveltejs/kit": "^2.6.1",
+		"@sveltejs/vite-plugin-svelte": "4.0.0-next.7",
+		"@tailwindcss/vite": "4.0.0-alpha.26",
+		"prettier": "^3.3.3",
+		"prettier-plugin-svelte": "^3.2.7",
+		"svelte": "5.0.0-next.262",
+		"svelte-check": "^4.0.4",
+		"tailwindcss": "4.0.0-alpha.26",
+		"typescript": "^5.6.2",
+		"vite": "^5.4.8"
+	},
+	"type": "module"
+}
