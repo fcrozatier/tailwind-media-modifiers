@@ -11,4 +11,15 @@
 @import 'tailwindcss';
 
 @layer components {
+	.btn-sm {
+		padding: var(--spacing-1);
+		background-color: var(--color-indigo-500);
+		color: var(--color-gray-700);
+	}
+
+	.btn-lg {
+		padding: var(--spacing-10);
+		background-color: var(--color-red-500);
+		color: var(--color-blue-700);
+	}
 }
