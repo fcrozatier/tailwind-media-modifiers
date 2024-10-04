@@ -1,25 +1,11 @@
-/* Tailwind theme */
-/* https://github.com/tailwindlabs/tailwindcss/blob/next/packages/tailwindcss/theme.css */
-
-/* Preflight */
-/* https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css */
-
-/* Typography */
-/* https://gist.github.com/adamwathan/41dcab602afd07ac8ba243eb186c324a */
-@layer base, theme, components, plugins,  utilities;
+@layer base, theme, utilities;
 
 @import 'tailwindcss';
 
-@layer components {
-	.btn-sm {
-		padding: var(--spacing-1);
-		background-color: var(--color-indigo-500);
-		color: var(--color-gray-700);
-	}
+@utility btn-sm {
+	@apply rounded-xl bg-indigo-500 p-1 text-gray-700;
+}
 
-	.btn-lg {
-		padding: var(--spacing-10);
-		background-color: var(--color-red-500);
-		color: var(--color-blue-700);
-	}
+@utility btn-lg {
+	@apply rounded-xl bg-red-500 p-10 text-blue-700;
 }
