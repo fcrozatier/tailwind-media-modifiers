@@ -1,25 +1,25 @@
 @layer base, theme, plugins, utilities;
 
 @import 'tailwindcss';
-/* Only way to be able to override prose utilities? */
-@import './prose.css' layer(plugins);
-/* @plugin '@tailwindcss/typography'; */
+/* Only way to be able to override prose utilities without !important modifier */
+/* @import './prose.css' layer(plugins); */
+@plugin '@tailwindcss/typography';
 
 /* Then just  */
-@layer plugins {
+/* @layer plugins {
 	.prose {
 		& p {
 			@apply text-red-500;
 		}
 	}
-}
+} */
 
 /* Otherwise @plugin directive we need this */
-/* :where(.prose) {
+:where(.prose) {
 	& p {
 		@apply text-red-500;
 	}
-} */
+}
 
 /* or this, but I need !important modifier */
 /* @layer utilities {
